@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>ASSIGNMNET2 DEEPINDER</title>
+<link th:href="@{/css/mainstyle.css}" rel= "stylesheet">
+</head>
+
+<body>
+	<h1>The Movie reviews</h1>
+
+	<table th:if="${movieList != null AND movieList != ''}">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>ReviewDate</th>
+			<th>ReviewTime</th>
+			<th>Review</th>
+			<th>StreamServices</th>
+			
+		</tr>
+		<tr th:each="m : ${movieList}">
+		 <td th:text="${m.id}">80</td>
+			<td th:text="${m.name}">thunderstorm</td>
+			<td th:text="${m.reviewDate}">2022-10-09</td>
+			<td th:text="${m.reviewTime}">9:00</td>
+			<td th:text="${m.review}">Excellent movie</td>
+			<td th:text="${m.streamservices}">recently released straight to television</td>
+			
+		</tr>	
+			
+	</table>
+	<hr>
+	<br>
+ <div class="container">
+	<form method="post" action="" th:action="@{/insertMovie}" th:object="${movie}">
+	  ID: <input type="number" th:field="*{id}"/><br><br>
+	  Name: <input type="text" name="name" th:field="*{name}" /><br> <br>
+	  Date: <input type="date" name="reviewDate"  th:field="*{reviewDate}"/><br> <br>
+	  Time: <input type="time" name="reviewTime" th:field="*{reviewTime}" /><br> <br>
+	  Reviews: <input type="text" name="review" th:field="*{review}" /><br> <br>
+	  StreamServices: <input type="text" name="streamservices" th:field="*{streamservices}" /><br><br>
+		<input type="submit" value="Go!" />
+	</form>
+ </div>
+</body>
+</html>

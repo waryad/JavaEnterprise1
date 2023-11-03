@@ -1,0 +1,3 @@
+INSERT INTO movie(name,reviewDate,reviewTime,review,streamservices) VALUES ('Avatar: The Way of Water','2022-10-01','12:00:00','excellent','in theatres now')
+INSERT INTO movie(name,reviewDate,reviewTime,review,streamservices) VALUES ('Halloween Ends','2022-09-05','01:00:00','good','recently released straight to television')
+INSERT INTO movie(name,reviewDate,reviewTime,review,streamservices) VALUES ('Superhero','2022-09-15','16:00:00','not bad','in theatres now')
